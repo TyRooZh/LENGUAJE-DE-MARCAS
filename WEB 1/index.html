@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="es"> <!--idioma que leera google para la SEO-->
+
+<head>
+    <meta charset="UTF-8"> <!-- ASCII, para que sepa que caracteres se van a utilizar (ñ,..)-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--que sea responsable con las medidas del sispositivo-->
+    <title>Pepinos</title> <!-- lo que se ve en la pestaña del ordenador -->
+</head>
+
+<body>
+    <a href="#comerSolo">ir a comer solo</a>
+    <h1>Pepinos</h1> <!--no poner muchos h... las h para titulos-->
+    <h2>Descripción</h2>
+    <h3>Características</h3>
+    <!--  hay hasta seis tipos de h -->
+
+    <a href="https://www.google.com/" target="_blank" rel="noopener noreferrer">Click para ir a google</a>
+    <!--es la url. Es una propiedad de la etiqueta(anchor). target="_blank" para que abra otra pestaña-->
+    <!--rel="noopener noreferrer" para que no trackeen en la nueva pestaña de donde vienes. Es una propiedad de seguridad-->
+
+    <br>
+    <img src="pepino.png" alt="Logotipo de un pepino" width="200" height="150" title="Pepino">
+    <!-- una de las etiquetas que no tienen cierre, es en si mismo un elemento, una imagen. src(source). El orden da igual, pero normalmente alt y title primero-->
+
+
+    <h2 id="comerSolo"> Tipos de pepino </h2>
+    <ul>
+        <li><a href="https://www.google.com">Pepino albino</a></li>
+        <li> Pepino moreno</li>
+        <li> Pepino rubio</li>
+    </ul>
+
+    <ol start="5" reversed>
+        <li><a href="https://www.google.com">Pepino albino</a></li>
+        <li> Pepino moreno</li>
+        <li> Pepino rubio</li>
+    </ol>
+    <dl>
+        <dt>Pepino Albino</dt>
+        <dd>Variedad de pepino blanco</dd>
+
+        <dt>Pepino Kirby</dt>
+        <dd>Variedad de pepino muy pequeño y rosa</dd>
+
+        <table border="1"> <!--Para la separacion de celdas. Luego lo haremos con css-->
+            <caption>Lista de pedidos</caption>
+            <thead> <!--Cabecera de mi tabla-->
+
+                <tr> <!-- Esto es una fila-->
+                    <th>Nº PEDIDO</th> <!--fILA DE CABECERA-->
+                    <th>FECHA</th>
+                    <th>VER</th>
+                    <th>IMPORTE</th>
+                    <th colspan="2">ACCION</th>
+                    <!--colspan para aumentar el tamaño de la celda. rowspan="3" Para cambiar el tamaño de la celda -->
+                </tr>
+            </thead>
+            <tbody>
+                <tr> <!-- tr = table row (fila)-->
+                    <td>#1234</td>
+                    <td>12/12/2026</td>
+                    <td><button type="button">Clic</button></td>
+                    <td>225€</td>
+                    <td><button type="button">Editar</button></td>
+                    <td><button type="button">Borrar</button></td>
+                </tr>
+                <tr>
+                    <td>#1234</td>
+                    <td>12/12/2026</td>
+                    <td><button type="button">Clic</button></td>
+                    <td>225€</td>
+                    <td><button type="button">Editar</button></td>
+                    <td><button type="button">Borrar</button></td>
+                </tr>
+                <tr>
+                    <td>#1234</td>
+                    <td>12/12/2026</td>
+                    <td><button type="button">Clic</button></td>
+                    <td>225€</td>
+                    <td><button type="button">Editar</button></td>
+                    <td><button type="button">Borrar</button></td>
+                </tr>
+                <tr>
+                    <td>#1234</td>
+                    <td>12/12/2026</td>
+                    <td><button type="button">Clic</button></td>
+                    <td>225€</td>
+                    <td><button type="button">Editar</button></td>
+                    <td><button type="button">Borrar</button></td>
+                </tr>
+                <tr>
+                    <td>#1234</td>
+                    <td>12/12/2026</td>
+                    <td><button type="button">Clic</button></td>
+                    <td>225€</td>
+                    <td><button type="button">Editar</button></td>
+                    <td><button type="button">Borrar</button></td>
+                </tr>
+            </tbody>
+            <tfoot> <!-- tfoot siempre tiene que ir despues del tbody. thead -> tbody -> tfoot-->
+                <td colspan="6">Total pedidos : 6</td>
+            </tfoot>
+        </table>
+        <br>
+        <br>
+        <br>
+
+        <form>
+
+            <fieldset>
+
+                <legend>Datos básicos</legend>
+
+                <label>Nombre:
+
+                    <input id="nombre" type="text" placeholder="Escribe tu nombre" required>
+
+                </label>
+                <!--El label despues del input para cuando el cliente pinche en el nombre directamente le deje introducir el input-->
+
+                <br>
+                <br>
+
+                <label> Edad:
+
+                    <input type="number" min="2" max="10" step="0.1" placeholder="Escribe aqui la edad">
+
+                </label>
+
+                <br>
+                <br>
+
+                <label> Fecha de nacimiento:
+
+                    <input type="date" placeholder="Escribe aqui la fecha de nacimiento">
+
+                </label>
+
+                <br>
+                <br>
+
+                <label> Email:
+
+                    <input type="email" placeholder="Escribe aqui el email">
+
+                </label>
+
+                <br>
+                <br>
+
+                <label> Teléfono:
+
+                    <input type="tel" placeholder="Escribe aqui el email">
+
+                </label>
+
+                <br>
+                <br>
+
+                <!--^[A-Za-z0-9]$+ -->
+
+                <label> Contraseña:
+
+                    <input type="password" minlength="8" placeholder="Escribe aqui el email">
+
+                </label>
+
+            </fieldset>
+
+            <br>
+            <br>
+
+            <fieldset>
+
+                <legend>Fecha, hora y número</legend>
+
+                <label> Hora:
+
+                    <input type="time" step="60">
+
+                </label>
+
+                <br>
+                <br>
+
+                <label> Hora cita:
+
+                    <input type="datetime-local" step="60">
+
+                </label>
+
+                <br>
+                <br>
+
+                <label> Mes cita:
+
+                    <input type="month">
+
+                </label>
+
+                <br>
+                <br>
+
+                <label> Semana:
+
+                    <input type="week">
+
+                </label>
+
+                <br>
+                <br>
+
+                <label> Color:
+
+                    <input type="color" value="#00FF00">
+
+                </label>
+
+            </fieldset>
+
+            <br>
+
+            <fieldset>
+
+                <legend>Opciones y listas</legend>
+
+                <fieldset>
+
+                    <legend>Tipo de pepino</legend>
+
+                    <input type="radio" name="tipo_pepino" value="moreno" checked>
+                    <label>Moreno</label>
+                    <br>
+                    <input type="radio" name="tipo_pepino" value="albino">
+                    <label>Albino</label>
+                    <br>
+                    <input type="radio" name="tipo_pepino" value="kirby">
+                    <label>Kirby</label>
+                    <br>
+
+                </fieldset>
+
+                <fieldset>
+
+                    <legend>Extras</legend>
+
+                    <input type="checkbox" name="extras" value="ketchup">
+                    <label>Ketchup</label>
+                    <br>
+                    <input type="checkbox" name="extras" value="costilleta">
+                    <label>Costilleta</label>
+                    <br>
+                    <input type="checkbox" name="extras" value="calamares">
+                    <label>Calamares</label>
+                    <br>
+                    <input type="checkbox" name="extras" value="croquetas">
+                    <label>Croquetas</label>
+                    <br>
+
+                </fieldset>
+
+            </fieldset>
+
+            <br>
+
+            <label>Variedad</label>
+            <select>
+                <option>--Elige la variedad--</option>
+                <optgroup label="Clásicos">
+                    <option>Holandes</option>
+                    <option>Español</option>
+                </optgroup>
+                <optgroup label="Modernos">
+                    <option>Pelao</option>
+                </optgroup>
+            </select>
+
+            <br>
+          
+            <br>
+            <br>
+            <label>Lotes:</label>
+
+            <select name="Lotes[]" multiple size="5">
+                <option>Lote 1</option>
+                <option>Lote 2</option>
+                <option>Lote 3</option>
+                <option>Lote 4</option>
+                <option>Lote 5</option>
+                <option>Lote 6</option>
+                <option>Lote 7</option>
+
+            </select>
+
+            <br>
+            <label>Observaciones:</label>
+            <textarea rows="10" cols="40"></textarea>
+
+            <br>
+            <br>
+
+            <label>Adjuntar archivo:</label>
+            <input type="file" accept=".pdf, .jpg" multiple>
+
+            <br>
+            <br>
+            <progress value="70" max="100"></progress>
+
+            <br>
+            <br>
+
+            <button type="submit">
+                Enviar formulario
+            </button>
+
+            <button type="reset">
+                Restrablecer ususario
+            </button>
+            <br>
+            <br>
+
+        </form>
+        <br>
+        <br>
+        <br>
+
+
+    </dl>
+
+    <!--<ul> || <ul*5 ???
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul> -->
+
+</body>
+
+</html>
