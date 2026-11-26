@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AulaConnect - Formación online</title>
+    <script src="app.js" defer></script>
 </head>
 <body>
     <a href="#contenido">Saltar al contenido</a>
@@ -28,7 +29,7 @@
             <!-- GET: los valores de los controles con name se incorporan a la URL. -->
             <form action="index.html" method="get">
                 <!-- get -> para buscar y aparece en la url, se envia a la pagina que este indicada en action esos parametros con cocatenacion en url-->
-                <!-- post -> para informacion sensible con logins-->
+                <!-- post -> para informacion sensible con logins, se trasladan en el cuerpo no en la URL-->
                 <p>
                     <label for="buscar">Buscar curso:</label>
                     <input type="search" id="buscar" name="buscar" value="">
@@ -51,6 +52,43 @@
             <article><h4>Bases de datos con PostgreSQL</h4><p>Categoría: Programación</p><p>Duración: 45 horas</p></article>
             <article><h4>Programación de aplicaciones Android</h4><p>Categoría: Programación</p><p>Duración: 60 horas</p></article>
         </section>
+
+        
+        <section>
+            <form
+                id="formInscripcion"
+                action="/inscripciones"
+                method="post"
+                enctype="multipart/form-data">
+                    
+                <p>
+                    <label for="email">Correo electrónico:</label>
+
+                    <!-- email valida el formato y required exige un valor. -->
+                    <input
+                    type="email"
+                    id="emailPrueba"
+                    name="emailPrueba"
+                    required>
+                </p>
+
+                <p>
+                    <label for="emailConfirmacion">Correo electrónico:</label>
+
+                    <!-- email valida el formato y required exige un valor. -->
+                    <input
+                        type="email"
+                        id="emailConfirmacion"
+                        name="emailConfirmacionl"
+                        required>
+                </p>
+                <button type="submit">
+                    Enviar inscripción
+                </button>
+            </form>
+        </section>
+
+    
         <section id="inscripcion">
             <h2>Formulario de inscripción</h2>
             <!-- POST: se envía en el cuerpo de la petición. Esta ruta requiere un servidor. -->
